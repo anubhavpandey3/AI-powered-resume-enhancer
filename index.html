@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Powered Portfolio Enhancer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+   
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI-Powered Portfolio Enhancer</h1>
+    <p class="description">
+      Paste your resume or upload a .txt, .pdf, or image file to get improvement suggestions!
+    </p>
+
+    <label for="jobRole"><i class="fas fa-briefcase"></i> Select Job Role:</label>
+    <select id="jobRole">
+      <option value="Front-End Developer" selected>Front-End Developer</option>
+      <option value="Data Analyst">Data Analyst</option>
+      <option value="UI/UX Designer">UI/UX Designer</option>
+    </select>
+
+    <label for="fileUpload"><i class="fas fa-file-upload"></i> Upload Resume File:</label>
+    <input type="file" id="fileUpload" accept=".txt, .pdf, .jpg, .jpeg" />
+
+    <label for="resumeText"><i class="fas fa-file-alt"></i> Or Paste Resume Text Here:</label>
+    <textarea id="resumeText" placeholder="Paste your resume text here..."></textarea>
+
+    <button onclick="analyzeResume()">Analyze Resume</button>
+
+    <section id="resultSection" class="hidden">
+      <h2>Suggestions:</h2>
+      <pre id="suggestions"></pre>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
